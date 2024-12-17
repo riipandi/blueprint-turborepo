@@ -1,11 +1,11 @@
 import { type VariantProps, tv } from 'tailwind-variants'
 
 export const buttonStyles = tv({
-  base: 'inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  base: 'inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   variants: {
     variant: {
       default:
-        'bg-blue-600 text-white shadow-md hover:bg-blue-700 active:bg-blue-800 active:scale-[0.98] hover:ring-2 hover:ring-offset-2 hover:ring-blue-500/50',
+        'bg-brand-600 text-white shadow-md hover:bg-brand-700 active:bg-brand-800 active:scale-[0.98] hover:ring-2 hover:ring-offset-2 hover:ring-brand-500/50',
       destructive:
         'bg-red-600 text-white shadow-md hover:bg-red-700 active:bg-red-800 active:scale-[0.98] hover:ring-2 hover:ring-offset-2 hover:ring-red-500/50',
       success:
@@ -13,14 +13,14 @@ export const buttonStyles = tv({
       warning:
         'bg-yellow-500 text-white shadow-md hover:bg-yellow-600 active:bg-yellow-700 active:scale-[0.98] hover:ring-2 hover:ring-offset-2 hover:ring-yellow-500/50',
       outline:
-        'border-2 border-gray-300 bg-white/80 text-gray-700 backdrop-blur-sm hover:border-blue-500 hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100',
+        'border-2 border-gray-300 bg-white/80 text-gray-700 backdrop-blur-sm hover:border-brand-500 hover:bg-brand-50 hover:text-brand-600 active:bg-brand-100',
       secondary:
         'bg-gray-100 text-gray-900 shadow-sm hover:bg-gray-200 active:bg-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700',
       ghost:
         'text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800',
-      link: 'text-blue-600 underline-offset-4 hover:underline hover:text-blue-700 active:text-blue-800',
+      link: 'text-brand-600 underline-offset-4 hover:underline hover:text-brand-700 active:text-brand-800',
       gradient:
-        'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md hover:from-blue-700 hover:to-purple-700 hover:shadow-lg',
+        'bg-gradient-to-r from-brand-600 to-purple-600 text-white shadow-md hover:from-brand-700 hover:to-purple-700 hover:shadow-lg',
     },
     size: {
       xs: 'h-7 px-2.5 text-xs rounded',
