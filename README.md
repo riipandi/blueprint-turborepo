@@ -21,7 +21,7 @@ This Turborepo includes the following packages and apps:
 
 ### Apps and Packages
 
-- `docs`: Example documentation site built with [Vite][vite] and [React][reactjs]
+- `docs`: Documentation site built with [Vite][vite] and [Storybook][storybook]
 - `web`: Example main web application built with [Vite][vite] and [React][reactjs]
 - `@repo/config-typescript`: Shared TypeScript configurations
 - `@repo/ui-react`: Reusable React components and utilities
@@ -69,6 +69,7 @@ See the [LICENSE-APACHE](./LICENSE-APACHE) and [LICENSE-MIT](./LICENSE-MIT) file
 [license-apache]: https://choosealicense.com/licenses/apache-2.0/
 [license-mit]: https://choosealicense.com/licenses/mit/
 [reactjs]: https://react.dev
+[storybook]: https://storybook.js.org
 [tailwind]: https://tailwindcss.com
 [turborepo]: https://turbo.build/repo/docs
 [typescript]: https://www.typescriptlang.org/
