@@ -21,7 +21,7 @@
     "devDependencies": {
         "@biomejs/biome": "catalog:",
         "@repo/config-typescript": "workspace:*",
-        "@repo/config-tailwind": "workspace:*",
+        "@repo/core-ui": "workspace:*",
         "@tailwindcss/vite": "4.0.0-beta.7",
         "@types/node": "^22.10.2",
         "@types/react": "^19.0.1",

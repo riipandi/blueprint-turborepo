@@ -1,16 +1,18 @@
+import { ButtonVariants, buttonStyles } from '@repo/core-ui/button.css'
+import { clx } from '@repo/core-ui/utils'
 import * as React from 'react'
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    ButtonVariants {}
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ ...props }, ref) => {
-  return (
-    <button
-      className="mb-4 rounded-lg bg-blue-600 px-4 py-2 transition-colors hover:bg-blue-700"
-      ref={ref}
-      {...props}
-    />
-  )
-})
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant, size, className, ...props }, ref) => {
+    return (
+      <button className={clx(buttonStyles({ variant, size, className }))} ref={ref} {...props} />
+    )
+  }
+)
 
 Button.displayName = 'Button'
 
