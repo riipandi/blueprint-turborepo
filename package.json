@@ -13,7 +13,7 @@
         "filter": "pnpm --silent --filter"
     },
     "devDependencies": {
-        "@biomejs/biome": "^1.9.4",
+        "@biomejs/biome": "catalog:",
         "npm-check-updates": "^17.1.11",
         "turbo": "^2.3.3"
     },
