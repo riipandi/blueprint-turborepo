@@ -28,7 +28,7 @@ export const buttonStyles = tv({
       default: 'h-10 px-5 py-2 text-sm',
       lg: 'h-12 px-8 text-base rounded-md',
       xl: 'h-14 px-10 text-lg rounded-lg font-semibold',
-      icon: 'h-10 w-10',
+      icon: 'size-9 aspect-square',
     },
     isLoading: {
       true: 'animate-pulse opacity-70 pointer-events-none',
