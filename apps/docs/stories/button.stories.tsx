@@ -31,8 +31,31 @@ const sizeOptions: NonNullable<ButtonVariants['size']>[] = [
 const meta: Meta<ButtonProps> = {
   title: 'Components/Button',
   component: Button,
-  parameters: {},
-  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+Button component provides clickable elements with various styles and states.
+
+## Example Usage
+\`\`\`tsx
+import { Button } from '@repo/ui-react/button'
+
+// Basic usage
+<Button>Click me</Button>
+
+// With variant
+<Button variant="destructive">Delete</Button>
+
+// With icon
+<Button>
+  <Search />
+  Search
+</Button>
+\`\`\``,
+      },
+    },
+  },
   argTypes: {
     variant: {
       control: { type: 'select' },
