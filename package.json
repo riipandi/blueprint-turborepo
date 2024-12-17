@@ -8,9 +8,9 @@
         "lint": "turbo lint",
         "check": "turbo check",
         "format": "biome format . --write",
+        "filter": "pnpm --silent --filter",
         "update-deps": "npm-check-updates --configFileName .ncurc.json",
-        "typecheck": "turbo typecheck",
-        "filter": "pnpm --silent --filter"
+        "typecheck": "turbo typecheck"
     },
     "devDependencies": {
         "@biomejs/biome": "catalog:",
