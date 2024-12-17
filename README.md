@@ -59,6 +59,10 @@ Copyrights in this project are retained by their contributors.
 
 See the [LICENSE-APACHE](./LICENSE-APACHE) and [LICENSE-MIT](./LICENSE-MIT) files for more information.
 
+---
+
+<sub>🤫 Psst! If you like my work you can support me via [GitHub sponsors](https://github.com/sponsors/riipandi).</sub>
+
 <!-- link reference definition -->
 [biome]: https://biomejs.dev
 [contribution]: https://github.com/riipandi/blueprint-turborepo/pulse
