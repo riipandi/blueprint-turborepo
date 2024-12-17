@@ -1,6 +1,6 @@
 [
     {
         "action": "remove",
-        "files": ["README.md"]
+        "files": ["README.md", "LICENSE-APACHE", "LICENSE-MIT", "pnpm-lock.yaml"]
     }
 ]
