@@ -1,10 +1,11 @@
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'pathe'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react(), tailwindcss(), tsconfigPaths()],
   publicDir: resolve('public'),
   build: {
     emptyOutDir: true,

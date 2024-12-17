@@ -5,28 +5,23 @@
     "sideEffects": ["**/*.css"],
     "files": ["dist"],
     "scripts": {
-        "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
-        "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
         "lint": "biome lint . --write",
         "check": "biome check . --write",
         "typecheck": "tsc --noEmit"
     },
     "exports": {
         "./button": "./src/components/button.tsx",
-        "./setup-counter": "./src/utils/counter.ts",
-        "./styles.css": "./dist/index.css"
+        "./setup-counter": "./src/utils/counter.ts"
     },
     "peerDependencies": {
         "react": "^19.0.0"
     },
     "devDependencies": {
         "@biomejs/biome": "catalog:",
-        "@repo/tailwind-config": "workspace:*",
+        "@repo/config-tailwind": "workspace:*",
         "@repo/config-typescript": "workspace:*",
         "@types/react": "^19.0.1",
-        "autoprefixer": "^10.4.20",
-        "postcss": "^8.4.49",
-        "tailwindcss": "^3.4.16",
+        "tailwindcss": "4.0.0-beta.7",
         "typescript": "catalog:"
     },
     "publishConfig": {

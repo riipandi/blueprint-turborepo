@@ -5,7 +5,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ ...props }, ref) => {
   return (
     <button
-      className="ui-mb-4 ui-rounded-lg ui-bg-blue-500 ui-px-4 ui-py-2 ui-transition-colors ui-hover:ui-bg-blue-600"
+      className="mb-4 rounded-lg bg-blue-600 px-4 py-2 transition-colors hover:bg-blue-700"
       ref={ref}
       {...props}
     />

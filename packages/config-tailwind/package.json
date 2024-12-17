@@ -1,13 +1,23 @@
 {
-    "name": "@repo/tailwind-config",
+    "name": "@repo/config-tailwind",
     "version": "0.0.0",
     "private": true,
+    "sideEffects": ["**/*.css"],
+    "files": ["dist"],
+    "scripts": {
+        "dev": "tailwindcss -i ./tailwind.css -o ./dist/tailwind.css --watch",
+        "build": "tailwindcss -i ./tailwind.css -o ./dist/tailwind.css --minify",
+        "lint": "biome lint . --write",
+        "check": "biome check . --write"
+    },
     "exports": {
-        ".": "./tailwind.config.ts"
+        "./tailwind.css": "./dist/tailwind.css"
     },
     "devDependencies": {
+        "@biomejs/biome": "catalog:",
         "@repo/config-typescript": "workspace:*",
-        "tailwindcss": "^3.4.16"
+        "@tailwindcss/cli": "4.0.0-beta.7",
+        "tailwindcss": "4.0.0-beta.7"
     },
     "publishConfig": {
         "access": "public"

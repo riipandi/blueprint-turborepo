@@ -5,7 +5,7 @@ export default function Page() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="flex min-h-screen items-center bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+    <div className="flex min-h-screen items-center bg-gradient-to-br from-cyan-700 to-slate-800 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Logo Section */}
         <div className="mb-12 flex justify-center space-x-8">
