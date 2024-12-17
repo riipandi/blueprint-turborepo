@@ -1,0 +1,35 @@
+{
+    "name": "@repo/ui-react",
+    "version": "0.0.0",
+    "private": true,
+    "sideEffects": ["**/*.css"],
+    "files": ["dist"],
+    "scripts": {
+        "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+        "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+        "lint": "biome lint . --write",
+        "check": "biome check . --write",
+        "typecheck": "tsc --noEmit"
+    },
+    "exports": {
+        "./button": "./src/components/button.tsx",
+        "./setup-counter": "./src/utils/counter.ts",
+        "./styles.css": "./dist/index.css"
+    },
+    "peerDependencies": {
+        "react": "^19.0.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "@repo/tailwind-config": "workspace:*",
+        "@repo/config-typescript": "workspace:*",
+        "@types/react": "^19.0.1",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.4.49",
+        "tailwindcss": "^3.4.16",
+        "typescript": "5.7.2"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
