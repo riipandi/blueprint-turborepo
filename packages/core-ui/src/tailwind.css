@@ -1,7 +1,8 @@
 /* Reference: https://tailwindcss.com/docs/v4-beta */
 
 @import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
+@plugin "tailwindcss-motion";
+@variant dark (&:where([data-theme="dark"] *));
 
 @theme {
     /* Brand Colors */
@@ -29,10 +30,8 @@
         --background: #ffffff;
         --foreground: oklch(0.07 0.011 252.11);
         --border: oklch(0.916 0.011 251.27);
-    }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
+        &:where([data-theme="dark"], [data-theme="dark"] *) {
             --background: oklch(0.07 0.011 252.11);
             --foreground: oklch(0.98 0.003 253.77);
             --border: oklch(0.231 0.027 266.12);
@@ -53,11 +52,9 @@
     }
 }
 
-@layer utilities {
-    /* Debug element */
-    .debug {
-        border-width: 1px;
-        border-style: dashed;
-        border-color: #f87171;
-    }
+/* Debug element */
+@utility debug {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: #f87171;
 }
