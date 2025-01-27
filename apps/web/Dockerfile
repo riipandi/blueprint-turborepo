@@ -66,7 +66,7 @@ ARG APP_LOG_LEVEL APP_SECRET_KEY APP_BASE_URL APP_DOMAIN DATABASE_URL
 COPY --chown=nonroot:nonroot --from=installer /srv/apps/web/dist /srv
 
 # Copy the static web server from the httpserver stage.
-COPY --from=httpserver /usr/local/bin/static-web-server /usr/local/bin/
+COPY --from=httpserver /usr/local/bin/static-web-server /usr/bin/
 
 # Copy some necessary system utilities from previous stage (~7MB).
 # To enhance security, consider avoiding the copying of sysutils.
@@ -89,7 +89,7 @@ USER nonroot:nonroot
 EXPOSE $SERVER_PORT
 
 ENTRYPOINT ["/usr/bin/tini", "--"]
-CMD ["/usr/local/bin/static-web-server", "-d", "/srv", "--page-fallback", "/srv/index.html"]
+CMD ["/usr/bin/static-web-server", "-d", "/srv", "--page-fallback", "/srv/index.html"]
 
 # -----------------------------------------------------------------------------
 # Container metadata: https://docs.docker.com/engine/manage-resources/labels
