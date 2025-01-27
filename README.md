@@ -35,6 +35,27 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript][typescript] for static type checking
 - [Biome][biome] for code formatting and linting
 
+
+## Docker Build
+
+```sh
+# Build Docker Image
+docker build -f apps/web/Dockerfile . \
+  -t blueprint-turborepo-web:latest \
+  --build-arg PLATFORM="linux/amd64" \
+  --build-arg NODE_VERSION=20 \
+  --no-cache
+
+# List Docker Images
+docker image list --filter reference=blueprint-turborepo-web:latest
+
+# Enter Docker Container
+docker run --network=host --rm -it --entrypoint /bin/sh blueprint-turborepo-web:latest
+
+# Run Docker Container
+docker run --network=host --rm -it --name blueprint-turborepo-web blueprint-turborepo-web:latest
+```
+
 ## Tasks to Complete
 
 After creating a new project from this template repository, ensure you update the documentation, including:
