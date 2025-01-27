@@ -79,17 +79,17 @@ COPY --from=glibc /bin/ls /bin/ls
 COPY --from=glibc /bin/sh /bin/sh
 
 # Define the host and port to listen on.
-ARG NODE_ENV=production HOST=0.0.0.0 PORT=3000
-ENV NODE_ENV=$NODE_ENV HOST=$HOST PORT=$PORT
-ENV TINI_SUBREAPER=true
+ARG NODE_ENV=production SERVER_HOST=0.0.0.0 SERVER_PORT=3000
+ENV SERVER_HOST=$SERVER_HOST SERVER_PORT=$SERVER_PORT
+ENV NODE_ENV=$NODE_ENV TINI_SUBREAPER=true
 STOPSIGNAL SIGQUIT
 
 WORKDIR /srv
 USER nonroot:nonroot
-EXPOSE $PORT
+EXPOSE $SERVER_PORT
 
 ENTRYPOINT ["/usr/bin/tini", "--"]
-CMD ["/usr/local/bin/static-web-server", "-a", "0.0.0.0", "-p", "3000", "-d", "/srv", "--page-fallback", "/srv/index.html"]
+CMD ["/usr/local/bin/static-web-server", "-d", "/srv", "--page-fallback", "/srv/index.html"]
 
 # -----------------------------------------------------------------------------
 # Container metadata: https://docs.docker.com/engine/manage-resources/labels
