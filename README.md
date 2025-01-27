@@ -35,7 +35,6 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript][typescript] for static type checking
 - [Biome][biome] for code formatting and linting
 
-
 ## Docker Build
 
 ```sh
