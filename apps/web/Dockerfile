@@ -66,7 +66,7 @@ ARG APP_LOG_LEVEL APP_SECRET_KEY APP_BASE_URL APP_DOMAIN DATABASE_URL
 COPY --chown=nonroot:nonroot --from=installer /srv/apps/web/dist /srv
 
 # Copy the static web server from the httpserver stage.
-COPY --from=httpserver /usr/local/bin/static-web-server /usr/local/bin/static-web-server
+COPY --from=httpserver /usr/local/bin/static-web-server /usr/local/bin/
 
 # Copy some necessary system utilities from previous stage (~7MB).
 # To enhance security, consider avoiding the copying of sysutils.
