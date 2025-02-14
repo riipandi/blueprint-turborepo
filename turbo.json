@@ -19,10 +19,15 @@
             "cache": false,
             "persistent": true
         },
-        "docker:build": {},
-        "docker:push": {},
-        "docker:run": {},
-        "docker:shell": {},
-        "docker:image": {}
+        "docker:build": { "cache": false },
+        "docker:push": { "cache": false },
+        "docker:run": { "cache": false },
+        "docker:shell": {
+            "cache": false,
+            "interactive": true,
+            "outputLogs": "new-only",
+            "persistent": true
+        },
+        "docker:image": { "cache": false }
     }
 }

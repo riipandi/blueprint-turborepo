@@ -58,11 +58,8 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store NODE_ENV=production pnpm build
 # -----------------------------------------------------------------------------
 FROM runner
 
-# ----- Read application environment variables --------------------------------
-
-ARG APP_LOG_LEVEL APP_SECRET_KEY APP_BASE_URL APP_DOMAIN DATABASE_URL
-
-# ----- Read application environment variables --------------------------------
+# Read application environment variables
+ARG PUBLIC_BASE_URL
 
 # Copy the build output files from previous stage.
 COPY --chown=nonroot:nonroot --from=builder /srv/apps/web/dist /srv

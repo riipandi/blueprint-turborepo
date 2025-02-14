@@ -8,6 +8,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   server: { port: 3000, strictPort: true, host: false },
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  envPrefix: ['APP_', 'PUBLIC_'],
   publicDir: resolve('public'),
   optimizeDeps: {
     // Do not optimize internal workspace dependencies.
