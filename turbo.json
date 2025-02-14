@@ -18,6 +18,11 @@
         "storybook": {
             "cache": false,
             "persistent": true
-        }
+        },
+        "docker:build": {},
+        "docker:push": {},
+        "docker:run": {},
+        "docker:shell": {},
+        "docker:image": {}
     }
 }

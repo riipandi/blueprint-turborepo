@@ -39,7 +39,7 @@ This Turborepo has some additional tools already setup for you:
 
 ```sh
 # Build Docker Image
-docker build -f apps/web/Dockerfile . \
+docker build -f apps/web/Containerfile . \
   -t blueprint-turborepo-web:latest \
   --build-arg PLATFORM="linux/amd64" \
   --build-arg NODE_VERSION=20 \

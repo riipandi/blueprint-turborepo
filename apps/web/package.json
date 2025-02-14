@@ -3,11 +3,20 @@
     "version": "0.0.0",
     "type": "module",
     "private": true,
+    "config": {
+        "image": "myorg-web"
+    },
     "scripts": {
         "dev": "vite --clearScreen false",
         "build": "tsc && vite build",
         "start": "pnpm dlx serve dist -l 3000 -s -n -C",
         "cleanup": "pnpm dlx rimraf dist node_modules",
+        "docker:build": "docker build -f Containerfile ../.. -t $npm_package_config_image:$npm_package_version",
+        "docker:run": "pnpm --silent run dockerx --name $npm_package_name $npm_package_config_image:$npm_package_version",
+        "docker:shell": "pnpm --silent run dockerx --entrypoint /bin/sh $npm_package_config_image:$npm_package_version",
+        "docker:image": "docker image list --filter reference=$npm_package_config_image:*",
+        "docker:push": "docker push $npm_package_config_image:$npm_package_version",
+        "dockerx": "docker run --network=host --rm -it --env-file .env -v $(pwd)/_data:/srv/_data",
         "lint": "biome lint . --write",
         "check": "biome check . --write",
         "typecheck": "tsc --noEmit"
