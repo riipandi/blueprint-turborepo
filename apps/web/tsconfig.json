@@ -1,5 +1,12 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
     "extends": "@repo/config-typescript/react-vite.json",
+    "compilerOptions": {
+        "tsBuildInfoFile": "node_modules/tsconfig.tsbuildinfo",
+        "baseUrl": ".",
+        "paths": {
+            "#/*": ["src/*"]
+        }
+    },
     "include": ["src"]
 }

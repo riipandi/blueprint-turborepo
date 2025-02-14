@@ -7,24 +7,14 @@ import * as Lucide from 'lucide-react'
 const variantOptions: NonNullable<ButtonVariants['variant']>[] = [
   'default',
   'destructive',
-  'success',
-  'warning',
   'outline',
   'secondary',
   'ghost',
   'link',
-  'gradient',
 ]
 
 // Create array of options for size
-const sizeOptions: NonNullable<ButtonVariants['size']>[] = [
-  'xs',
-  'sm',
-  'default',
-  'lg',
-  'xl',
-  'icon',
-]
+const sizeOptions: NonNullable<ButtonVariants['size']>[] = ['sm', 'default', 'lg', 'icon']
 
 const meta: Meta<ButtonProps> = {
   title: 'Basic Components/Button',
@@ -85,17 +75,8 @@ export const VariantShowcase: Story = {
       <Button {...args} variant="secondary">
         Secondary
       </Button>
-      <Button {...args} variant="gradient">
-        Success
-      </Button>
-      <Button {...args} variant="success">
-        Success
-      </Button>
       <Button {...args} variant="destructive">
         Destructive
-      </Button>
-      <Button {...args} variant="warning">
-        Outline
       </Button>
       <Button {...args} variant="outline">
         Outline
@@ -121,17 +102,11 @@ export const SizeShowcase: Story = {
   },
   render: (args) => (
     <div className="flex flex-wrap items-end gap-4">
-      <Button {...args} size="xs">
-        Small
-      </Button>
       <Button {...args} size="sm">
         Small
       </Button>
       <Button {...args}>Default</Button>
       <Button {...args} size="lg">
-        Large
-      </Button>
-      <Button {...args} size="xl">
         Large
       </Button>
       <Button {...args} size="icon">

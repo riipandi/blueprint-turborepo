@@ -3,7 +3,9 @@ import { withThemeProvider } from './components/decorators'
 import { DocsContainer } from './components/docs-container'
 import { Link } from './components/link'
 import { light } from './themes'
-import '@repo/ui-react/tailwind.css'
+
+// Import the Tailwind CSS stylesheet
+import '../src/styles/tailwind.css'
 
 const preview: Preview = {
   // Optional parameter to center the component in the Canvas.
@@ -77,7 +79,7 @@ const preview: Preview = {
       container: DocsContainer,
       defaultName: 'Documentation',
       toc: {
-        /* Enables the table of contents */
+        /* Table of contents */
         headingSelector: 'h2, h3',
         ignoreSelector: '#preview',
         title: 'Table of Contents',

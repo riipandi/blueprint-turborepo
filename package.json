@@ -6,7 +6,8 @@
         "build": "turbo build",
         "start": "turbo start",
         "storybook": "turbo storybook --filter=@repo/ui-react",
-        "cleanup": "turbo cleanup",
+        "cleanup": "turbo cleanup && pnpm dlx rimraf pnpm-lock.yaml node_modules",
+        "postinstall": "pnpm approve-builds",
         "lint": "turbo lint",
         "check": "turbo check",
         "format": "biome format . --write",
@@ -21,6 +22,6 @@
     },
     "packageManager": "pnpm@10.4.0",
     "pnpm": {
-        "onlyBuiltDependencies": ["@parcel/watcher"]
+        "onlyBuiltDependencies": ["@biomejs/biome", "@parcel/watcher", "esbuild"]
     }
 }

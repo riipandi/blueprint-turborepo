@@ -44,7 +44,6 @@ export const light = create({
 export const dark = create({
   base: 'dark',
   ...brand,
-  // brandImage: '/images/logo-name-dark.png',
   colorPrimary: '#ffffff',
   colorSecondary: '#374151',
 
