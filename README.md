@@ -12,7 +12,7 @@ Minimal monorepo starter with Turborepo, Vite, Tailwind CSS, and TypeScript.
 Run the following command:
 
 ```sh
-npx tiged riipandi/blueprint-turborepo my-new-project
+pnpm dlx tiged riipandi/blueprint-turborepo my-new-project
 ```
 
 ## What's inside?
@@ -21,9 +21,8 @@ This Turborepo includes the following packages and apps:
 
 ### Apps and Packages
 
-- `docs`: Documentation site built with [Vite][vite] and [Storybook][storybook]
 - `web`: Example main web application built with [Vite][vite] and [React][reactjs]
-- `@repo/config-typescript`: Shared TypeScript configurations
+- `@repo/config-typescript`: Shared TypeScript configurations and [Storybook][storybook]
 - `@repo/ui-react`: Reusable React components and utilities
 
 Each package and app is 100% [TypeScript][typescript].

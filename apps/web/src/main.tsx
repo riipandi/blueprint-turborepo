@@ -1,10 +1,11 @@
 // Import the Tailwind CSS styles.
 import '@repo/ui-react/tailwind.css'
-import './styles.css'
+import './styles/global.css'
 
 import * as React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from '#/app'
+import { BrowserRouter, useRoutes } from 'react-router'
+import { catchAllRoute, publicRoutes } from '#/routes'
 
 // The root element for the app.
 const rootElement = document.getElementById('app')
@@ -15,10 +16,15 @@ if (!rootElement) {
   )
 }
 
+// The main component for the application.
+const AppRoutes = () => useRoutes([...publicRoutes, catchAllRoute])
+
 // When you use Strict Mode, React renders each component twice to help you find unexpected side effects.
 // @ref: https://react.dev/blog/2022/03/08/react-18-upgrade-guide#react
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="/">
+      <AppRoutes />
+    </BrowserRouter>
   </React.StrictMode>
 )

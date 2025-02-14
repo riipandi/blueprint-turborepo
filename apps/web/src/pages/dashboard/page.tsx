@@ -1,6 +1,6 @@
 import { Button } from '@repo/ui-react/components'
 import * as React from 'react'
-import PageShell from '#/shell'
+import PageShell from '#/layouts/page-shell'
 
 export default function Page() {
   const [count, setCount] = React.useState(0)
