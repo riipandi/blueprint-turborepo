@@ -27,103 +27,6 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2
 
-  apps/docs:
-    dependencies:
-      '@repo/ui-react':
-        specifier: workspace:*
-        version: link:../../packages/ui-react
-      consola:
-        specifier: ^3.4.0
-        version: 3.4.0
-      lucide-react:
-        specifier: ^0.475.0
-        version: 0.475.0(react@19.0.0)
-      pathe:
-        specifier: ^2.0.3
-        version: 2.0.3
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.0.0(react@19.0.0)
-      react-router:
-        specifier: ^7.1.5
-        version: 7.1.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      std-env:
-        specifier: ^3.8.0
-        version: 3.8.0
-    devDependencies:
-      '@biomejs/biome':
-        specifier: 'catalog:'
-        version: 1.9.4
-      '@repo/config-typescript':
-        specifier: workspace:*
-        version: link:../../packages/config-typescript
-      '@repo/core-ui':
-        specifier: workspace:*
-        version: link:../../packages/core-ui
-      '@storybook/addon-essentials':
-        specifier: ^8.5.6
-        version: 8.5.6(@types/react@19.0.8)(storybook@8.5.6)
-      '@storybook/addon-links':
-        specifier: ^8.5.6
-        version: 8.5.6(react@19.0.0)(storybook@8.5.6)
-      '@storybook/addon-themes':
-        specifier: ^8.5.6
-        version: 8.5.6(storybook@8.5.6)
-      '@storybook/blocks':
-        specifier: ^8.5.6
-        version: 8.5.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.6)
-      '@storybook/manager-api':
-        specifier: ^8.5.6
-        version: 8.5.6(storybook@8.5.6)
-      '@storybook/react':
-        specifier: ^8.5.6
-        version: 8.5.6(@storybook/test@8.5.6(storybook@8.5.6))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.6)(typescript@5.7.3)
-      '@storybook/react-vite':
-        specifier: ^8.5.6
-        version: 8.5.6(@storybook/test@8.5.6(storybook@8.5.6))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(rollup@4.34.7)(storybook@8.5.6)(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
-      '@storybook/test':
-        specifier: ^8.5.6
-        version: 8.5.6(storybook@8.5.6)
-      '@storybook/theming':
-        specifier: ^8.5.6
-        version: 8.5.6(storybook@8.5.6)
-      '@tailwindcss/vite':
-        specifier: ^4.0.6
-        version: 4.0.6(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
-      '@types/node':
-        specifier: ^22.13.4
-        version: 22.13.4
-      '@types/react':
-        specifier: ^19.0.8
-        version: 19.0.8
-      '@types/react-dom':
-        specifier: ^19.0.3
-        version: 19.0.3(@types/react@19.0.8)
-      '@vitejs/plugin-react':
-        specifier: ^4.3.4
-        version: 4.3.4(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
-      storybook:
-        specifier: ^8.5.6
-        version: 8.5.6
-      tailwindcss:
-        specifier: ^4.0.6
-        version: 4.0.6
-      tailwindcss-motion:
-        specifier: ^1.1.0
-        version: 1.1.0(tailwindcss@4.0.6)
-      typescript:
-        specifier: 'catalog:'
-        version: 5.7.3
-      vite:
-        specifier: ^6.1.0
-        version: 6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1)
-      vite-tsconfig-paths:
-        specifier: ^5.1.4
-        version: 5.1.4(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
-
   apps/web:
     dependencies:
       '@repo/ui-react':
@@ -154,9 +57,6 @@ importers:
       '@repo/config-typescript':
         specifier: workspace:*
         version: link:../../packages/config-typescript
-      '@repo/core-ui':
-        specifier: workspace:*
-        version: link:../../packages/core-ui
       '@tailwindcss/vite':
         specifier: ^4.0.6
         version: 4.0.6(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
@@ -172,9 +72,6 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.4
         version: 4.3.4(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.20(postcss@8.5.2)
       tailwindcss:
         specifier: ^4.0.6
         version: 4.0.6
@@ -193,64 +90,96 @@ importers:
 
   packages/config-typescript: {}
 
-  packages/core-ui:
+  packages/ui-react:
     dependencies:
+      lucide-react:
+        specifier: ^0.475.0
+        version: 0.475.0(react@19.0.0)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@biomejs/biome':
+        specifier: 'catalog:'
+        version: 1.9.4
+      '@repo/config-typescript':
+        specifier: workspace:*
+        version: link:../config-typescript
+      '@storybook/addon-a11y':
+        specifier: ^8.5.6
+        version: 8.5.6(storybook@8.5.6)
+      '@storybook/addon-essentials':
+        specifier: ^8.5.6
+        version: 8.5.6(@types/react@19.0.8)(storybook@8.5.6)
+      '@storybook/addon-links':
+        specifier: ^8.5.6
+        version: 8.5.6(react@19.0.0)(storybook@8.5.6)
+      '@storybook/addon-themes':
+        specifier: ^8.5.6
+        version: 8.5.6(storybook@8.5.6)
+      '@storybook/blocks':
+        specifier: ^8.5.6
+        version: 8.5.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.6)
+      '@storybook/core-events':
+        specifier: ^8.5.6
+        version: 8.5.6(storybook@8.5.6)
+      '@storybook/manager-api':
+        specifier: ^8.5.6
+        version: 8.5.6(storybook@8.5.6)
+      '@storybook/react':
+        specifier: ^8.5.6
+        version: 8.5.6(@storybook/test@8.5.6(storybook@8.5.6))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.6)(typescript@5.7.3)
+      '@storybook/react-vite':
+        specifier: ^8.5.6
+        version: 8.5.6(@storybook/test@8.5.6(storybook@8.5.6))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(rollup@4.34.7)(storybook@8.5.6)(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
+      '@storybook/test':
+        specifier: ^8.5.6
+        version: 8.5.6(storybook@8.5.6)
+      '@storybook/theming':
+        specifier: ^8.5.6
+        version: 8.5.6(storybook@8.5.6)
+      '@tailwindcss/cli':
+        specifier: 4.0.6
+        version: 4.0.6
+      '@tailwindcss/vite':
+        specifier: ^4.0.6
+        version: 4.0.6(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
+      '@types/react':
+        specifier: ^19.0.8
+        version: 19.0.8
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      react-router:
+        specifier: ^7.1.5
+        version: 7.1.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      storybook:
+        specifier: ^8.5.6
+        version: 8.5.6
       tailwind-merge:
         specifier: ^3.0.1
         version: 3.0.1
       tailwind-variants:
         specifier: ^0.3.1
         version: 0.3.1(tailwindcss@4.0.6)
+      tailwindcss:
+        specifier: ^4.0.6
+        version: 4.0.6
       tailwindcss-motion:
         specifier: ^1.1.0
         version: 1.1.0(tailwindcss@4.0.6)
-    devDependencies:
-      '@biomejs/biome':
-        specifier: 'catalog:'
-        version: 1.9.4
-      '@repo/config-typescript':
-        specifier: workspace:*
-        version: link:../config-typescript
-      '@tailwindcss/cli':
-        specifier: 4.0.6
-        version: 4.0.6
-      tailwindcss:
-        specifier: ^4.0.6
-        version: 4.0.6
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
-
-  packages/ui-react:
-    dependencies:
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-    devDependencies:
-      '@biomejs/biome':
-        specifier: 'catalog:'
-        version: 1.9.4
-      '@repo/config-typescript':
-        specifier: workspace:*
-        version: link:../config-typescript
-      '@repo/core-ui':
-        specifier: workspace:*
-        version: link:../core-ui
-      '@types/react':
-        specifier: ^19.0.8
-        version: 19.0.8
-      tailwind-variants:
-        specifier: ^0.3.1
-        version: 0.3.1(tailwindcss@4.0.6)
-      tailwindcss:
-        specifier: ^4.0.6
-        version: 4.0.6
-      typescript:
-        specifier: 'catalog:'
-        version: 5.7.3
+      vite:
+        specifier: ^6.1.0
+        version: 6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1)
+      vite-tsconfig-paths:
+        specifier: ^5.1.4
+        version: 5.1.4(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1))
 
 packages:
 
@@ -774,6 +703,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@storybook/addon-a11y@8.5.6':
+    resolution: {integrity: sha512-LsJ93KTT9f3EW1XamH1U4zZaCbiP5wFWjQm3nw3meGZC1FE2X6vaaIEERVJwUtIPZtEU94Cu1WD15/FZqnpmAA==}
+    peerDependencies:
+      storybook: ^8.5.6
+
   '@storybook/addon-actions@8.5.6':
     resolution: {integrity: sha512-kREkqUNmaYFYL5NsgbtYXxuFbVGuoA1reQPYl/ToqI/ujXZo1XDo0o+Sztjj8r2GVAjaM6a96FUxEJ7yg1yBCg==}
     peerDependencies:
@@ -858,6 +792,11 @@ packages:
 
   '@storybook/components@8.5.6':
     resolution: {integrity: sha512-d2mhnnce2C03lRhBEtVR9lS78YueQGBS949R3QXPsEXmrkfDMpcnFI3DIOByjnea6ZeS0+i4lYjnfiAJb0oiMQ==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
+  '@storybook/core-events@8.5.6':
+    resolution: {integrity: sha512-sqSeK6r9drup+pTrrS+5+GLUkflhz53F3TVdJUEdvkCehDE/gYgw3VKPgvYLDCQogTovCwzaz0LebKsSKmpl1g==}
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
@@ -1151,16 +1090,13 @@ packages:
     resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
     engines: {node: '>=4'}
 
-  autoprefixer@10.4.20:
-    resolution: {integrity: sha512-XY25y5xSv/wEoqzDyXXME4AFfkZI0P23z6Fs3YgymDnKJkCGOnkL0iTxCa85UTqaSgfcqyf3UA6+c7wUvx/16g==}
-    engines: {node: ^10 || ^12 || >=14}
-    hasBin: true
-    peerDependencies:
-      postcss: ^8.1.0
-
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
+
+  axe-core@4.10.2:
+    resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
+    engines: {node: '>=4'}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1362,9 +1298,6 @@ packages:
   foreground-child@3.3.0:
     resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
     engines: {node: '>=14'}
-
-  fraction.js@4.3.7:
-    resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -1641,10 +1574,6 @@ packages:
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
 
-  normalize-range@0.1.2:
-    resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
-    engines: {node: '>=0.10.0'}
-
   npm-check-updates@17.1.14:
     resolution: {integrity: sha512-dr4bXIxETubLI1tFGeock5hN8yVjahvaVpx+lPO4/O2md3zJuxB7FgH3MIoTvQSCgsgkIRpe0skti01IEAA5tA==}
     engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
@@ -1705,9 +1634,6 @@ packages:
   possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
     engines: {node: '>= 0.4'}
-
-  postcss-value-parser@4.2.0:
-    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
   postcss@8.5.2:
     resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
@@ -2483,6 +2409,13 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.34.7':
     optional: true
 
+  '@storybook/addon-a11y@8.5.6(storybook@8.5.6)':
+    dependencies:
+      '@storybook/addon-highlight': 8.5.6(storybook@8.5.6)
+      '@storybook/test': 8.5.6(storybook@8.5.6)
+      axe-core: 4.10.2
+      storybook: 8.5.6
+
   '@storybook/addon-actions@8.5.6(storybook@8.5.6)':
     dependencies:
       '@storybook/global': 5.0.0
@@ -2594,6 +2527,10 @@ snapshots:
       vite: 6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.6.1)
 
   '@storybook/components@8.5.6(storybook@8.5.6)':
+    dependencies:
+      storybook: 8.5.6
+
+  '@storybook/core-events@8.5.6(storybook@8.5.6)':
     dependencies:
       storybook: 8.5.6
 
@@ -2917,19 +2854,11 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  autoprefixer@10.4.20(postcss@8.5.2):
-    dependencies:
-      browserslist: 4.24.3
-      caniuse-lite: 1.0.30001689
-      fraction.js: 4.3.7
-      normalize-range: 0.1.2
-      picocolors: 1.1.1
-      postcss: 8.5.2
-      postcss-value-parser: 4.2.0
-
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.0.0
+
+  axe-core@4.10.2: {}
 
   balanced-match@1.0.2: {}
 
@@ -3134,8 +3063,6 @@ snapshots:
     dependencies:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
-
-  fraction.js@4.3.7: {}
 
   fsevents@2.3.3:
     optional: true
@@ -3353,8 +3280,6 @@ snapshots:
 
   node-releases@2.0.19: {}
 
-  normalize-range@0.1.2: {}
-
   npm-check-updates@17.1.14: {}
 
   open@8.4.2:
@@ -3399,8 +3324,6 @@ snapshots:
       '@babel/runtime': 7.26.0
 
   possible-typed-array-names@1.0.0: {}
-
-  postcss-value-parser@4.2.0: {}
 
   postcss@8.5.2:
     dependencies:

@@ -5,6 +5,8 @@
         "dev": "turbo dev",
         "build": "turbo build",
         "start": "turbo start",
+        "storybook": "turbo storybook --filter=@repo/ui-react",
+        "cleanup": "turbo cleanup",
         "lint": "turbo lint",
         "check": "turbo check",
         "format": "biome format . --write",
@@ -17,5 +19,8 @@
         "npm-check-updates": "^17.1.14",
         "turbo": "^2.4.2"
     },
-    "packageManager": "pnpm@10.4.0"
+    "packageManager": "pnpm@10.4.0",
+    "pnpm": {
+        "onlyBuiltDependencies": ["@parcel/watcher"]
+    }
 }

@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
+  server: { port: 3000, strictPort: true, host: false },
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   publicDir: resolve('public'),
   build: {
@@ -15,11 +16,5 @@ export default defineConfig({
     rollupOptions: {
       input: { app: resolve('index.html') },
     },
-  },
-  base: '/',
-  server: {
-    port: 4100,
-    strictPort: true,
-    host: true,
   },
 })

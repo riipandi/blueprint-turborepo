@@ -9,10 +9,13 @@
         "lint": {},
         "check": {},
         "typecheck": {},
-        "start": {
-            "cache": false
-        },
+        "cleanup": { "cache": false },
+        "start": { "cache": false },
         "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "storybook": {
             "cache": false,
             "persistent": true
         }

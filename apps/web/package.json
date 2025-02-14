@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "vite --clearScreen false",
         "build": "tsc && vite build",
-        "start": "pnpm dlx serve dist -l 4100 -s -n -C",
+        "start": "pnpm dlx serve dist -l 3000 -s -n -C",
+        "cleanup": "pnpm dlx rimraf dist node_modules",
         "lint": "biome lint . --write",
         "check": "biome check . --write",
         "typecheck": "tsc --noEmit"
@@ -15,21 +16,19 @@
         "@repo/ui-react": "workspace:*",
         "consola": "^3.4.0",
         "pathe": "^2.0.3",
-        "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-router": "^7.1.5",
+        "react": "^19.0.0",
         "std-env": "^3.8.0"
     },
     "devDependencies": {
         "@biomejs/biome": "catalog:",
         "@repo/config-typescript": "workspace:*",
-        "@repo/core-ui": "workspace:*",
         "@tailwindcss/vite": "^4.0.6",
         "@types/node": "^22.13.4",
         "@types/react": "^19.0.8",
         "@types/react-dom": "^19.0.3",
         "@vitejs/plugin-react": "^4.3.4",
-        "autoprefixer": "^10.4.20",
         "tailwindcss": "^4.0.6",
         "tailwindcss-motion": "^1.1.0",
         "typescript": "catalog:",

@@ -3,14 +3,11 @@ import { mergeConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 const config: StorybookConfig = {
-  stories: ['./_docs/**/*.mdx', '../stories/**/*.mdx', '../stories/**/*.stories.@(ts|tsx)'],
+  stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(ts|tsx)'],
   addons: [
-    {
-      name: '@storybook/addon-essentials',
-      options: { backgrounds: false, controls: true, actions: true },
-    },
+    { name: '@storybook/addon-essentials', options: { backgrounds: false } },
     '@storybook/addon-links',
-    '@storybook/addon-themes',
+    '@storybook/addon-a11y',
   ],
   framework: {
     name: '@storybook/react-vite',
@@ -19,6 +16,7 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true, // 👈 Disables telemetry
     enableCrashReports: false, // 👈 Appends the crash reports to the telemetry events
+    disableWhatsNewNotifications: true, // 👈 Disables the whats new notification
   },
   async viteFinal(config) {
     return mergeConfig(config, {

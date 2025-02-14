@@ -1,5 +1,5 @@
 import './main.css'
-import '@repo/core-ui/tailwind.css'
+import '@repo/ui-react/tailwind.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './app'

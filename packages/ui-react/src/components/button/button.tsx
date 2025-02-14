@@ -1,6 +1,6 @@
-import { ButtonVariants, buttonStyles } from '@repo/core-ui/button.css'
-import { clx } from '@repo/core-ui/utils'
+import { clx } from '@repo/ui-react/utils'
 import * as React from 'react'
+import { type ButtonVariants, buttonStyles } from './button.css'
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

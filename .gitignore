@@ -1,49 +1,80 @@
+node_modules
 /.fleet
 /.idea
 /.pnp
 /.husky
+/.unikraft
 .pnp.js
 .DS_Store
 .DS_Store?
-node_modules
+.rollup.cache
+.cache
+.output
+.pnpm/
+.turbo/
+.temp/
+.tmp/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-coverage/
 $RECYCLE.BIN/
 *tsbuildinfo
+*.bak
+coverage/
+temp/
+tmp/
+
+.husky
+.pnpm-store
+.vite-inspect
+testdata/
+vendor/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# VSCode
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
 !.vscode/launch.json
-*.bak
-
-.rollup.cache/
-.cache/
-.output/
-.turbo
 
 # SQLite
 *.sqlite*
 *.sqlite3*
 *.db
 
-# Nitro
+# Projects
 _data/
 build/
 dist/
+dist-ssr/
+.astro/
 .data
 .dist
-.nitro
 .cache
 .output
 .client
 .build
+.react-router
 .wrangler
+go.sum*
 
-# Vite config
+# Vite & Vitest config
 vite.config.*
 !vite.config.ts
+vitest.config.*
+!vitest.config.ts
+!vitest.config.mts
+vitest.workspace.*
+!vitest.workspace.ts
+!vitest.workspace.mts
 
 # envars
 .env.*
@@ -55,6 +86,7 @@ compose.env*
 playwright/.cache/
 playwright-report/
 tests-results/
+test-results/
 blob-report/
 .playwright/
 
@@ -65,15 +97,9 @@ blob-report/
 *storybook.log
 storybook-static/
 
-# fly.io
-fly*.toml*
-!fly*.example.toml
-
 # Miscellaneous
-RELEASE_NOTE.md
-vite.config.ts.*
+pnpm-exec-summary.json
 slim.report.json
-.unikraft/
 
 # Terraform
 .terraform/
@@ -81,3 +107,9 @@ slim.report.json
 terraform.tfstate*
 terraform.tfvars*
 !terraform.tfvars.example
+
+# moon
+.moon/cache
+.moon/docker
+
+# Specific directories for individual projects

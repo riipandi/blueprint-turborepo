@@ -144,6 +144,6 @@
             "**/*.css",
             "**/*.json"
         ],
-        "ignore": [".github", ".build", ".output", ".dist", ".wrangler", "public"]
+        "ignore": [".github", ".next", "public"]
     }
 }

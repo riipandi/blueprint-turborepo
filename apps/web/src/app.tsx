@@ -1,4 +1,4 @@
-import { Button } from '@repo/ui-react/button'
+import { Button } from '@repo/ui-react/components'
 import { useState } from 'react'
 
 export default function Page() {
