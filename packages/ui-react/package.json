@@ -9,15 +9,15 @@
         "build": "pnpm -s build:css && pnpm -s build:storybook",
         "storybook": "VITE_CJS_IGNORE_WARNING=true storybook dev -p 6006 --no-open",
         "build:storybook": "VITE_CJS_IGNORE_WARNING=true storybook build -o storybook-static",
-        "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/tailwind.css --minify",
-        "dev": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/tailwind.css --watch",
+        "build:css": "tailwindcss -i ./src/assets/global.css -o ./dist/global.css --minify",
+        "dev": "tailwindcss -i ./src/assets/global.css -o ./dist/global.css --watch",
         "cleanup": "pnpm dlx rimraf dist node_modules storybook-static",
         "lint": "biome lint . --write",
         "check": "biome check . --write",
         "typecheck": "tsc --noEmit"
     },
     "exports": {
-        "./tailwind.css": "./dist/tailwind.css",
+        "./global.css": "./src/assets/global.css",
         "./components": "./src/components/index.ts",
         "./utils": "./src/utils/index.ts"
     },

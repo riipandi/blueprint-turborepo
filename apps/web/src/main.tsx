@@ -1,6 +1,5 @@
-// Import the Tailwind CSS styles.
-import '@repo/ui-react/tailwind.css'
-import './styles/global.css'
+// Import global CSS stylesheet
+import '@repo/ui-react/global.css'
 
 import * as React from 'react'
 import ReactDOM from 'react-dom/client'

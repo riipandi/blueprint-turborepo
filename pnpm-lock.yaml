@@ -78,9 +78,6 @@ importers:
       tailwindcss:
         specifier: ^4.0.6
         version: 4.0.6
-      tailwindcss-motion:
-        specifier: ^1.1.0
-        version: 1.1.0(tailwindcss@4.0.6)
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
